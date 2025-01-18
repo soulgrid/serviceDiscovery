@@ -1,9 +1,11 @@
-spring:
-  config:
-    import: optional:configserver:http://localhost:50001
-  cloud:
-    config:
-      name: service-discovery
-    profiles:
-      active: dev
+server:
+  port: 50000
 
+spring:
+  application:
+    name: service-discovery
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
